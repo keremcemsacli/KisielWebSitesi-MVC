@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center .avatar img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin-top: 5%;
+    object-fit: cover;
+}
+
+.center {
+    width: 600px;
+    background-color: black;
+    color: whitesmoke;
+    height: 700px;
+    text-align: center;
+    border-radius: 90px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+.content h1, p, h4, h3, p {
+    font-weight: lighter;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+.content h4 {
+    margin-top: 30px;
+    color: whitesmoke;
+}
+
+.content p {
+    margin-top: 40px;
+    color: whitesmoke;
+}
+
+
+.content h3 {
+    margin-top: 50px;
+    color: whitesmoke;
+}
+
+div.soical i {
+    padding: 0 10px;
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+    div.soical i:hover {
+        color: rgba(0, 0, 0, 0.64);
+        transition: 0.5s;
+    }
+
+@media screen and (max-width:700px) {
+    .center {
+        width: 300px;
+        height: 600px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-family: 14px;
+    }
+
+    .soical a i {
+        font-size: 35px;
+    }
+}
+/* dark mode */
+.mode-control {
+    position: absolute;
+    color: black;
+    top: 40px;
+    right: 100px;
+}
+
+body.dark {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.mode-control input {
+    position: absolute;
+    opacity: 0;
+}
+
+.mode-control span:nth-of-type(2) {
+    display: none;
+}
+
+.mode-control input:checked + span {
+    display: none;
+}
+
+    .mode-control input:checked + span + span {
+        display: inline-block;
+    }
+
+body.dark .mode-control span {
+    color: whitesmoke;
+}
+
+body.dark .center {
+    background-color: whitesmoke;
+    color: black;
+}
+
+body.dark .content h1 {
+    color: black;
+}
+
+body.dark .content h4 {
+    color: black;
+}
+
+body.dark .content p {
+    color: black;
+}
+
+body.dark .content h3 {
+    color: black;
+}
+
+body.dark div.soical i{
+    color: black;
+}

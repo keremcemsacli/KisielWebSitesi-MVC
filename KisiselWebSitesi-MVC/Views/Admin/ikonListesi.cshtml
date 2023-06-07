@@ -1,0 +1,30 @@
+﻿@using KisiselWebSitesi_MVC.Models
+@model List<ikonlar>
+@{
+    ViewBag.Title = "ikonListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İkonlar</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ikon</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td> <i class="@x.ikon"></i> </td>
+            <td> <a href="/Admin/ikonGetir/@x.id" class="btn btn-primary">Güncelle</a> </td>
+            <td> <a href="/Admin/ikonSil/@x.id" class="btn btn-danger">Sil</a> </td>
+            
+        </tr>
+    }
+</table>
+
+<a href="/Admin/yenikonlar/" class="btn btn-primary">Yeni İkon Ekle</a>
+

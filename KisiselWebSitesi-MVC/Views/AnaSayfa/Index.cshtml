@@ -1,0 +1,69 @@
+﻿@using KisiselWebSitesi_MVC.Models
+@model List<AnaSayfa>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Kişisel Web Sitesi</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="~/web-KisiselWebSitesi-MVC/style3.css">
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <label class="mode-control">
+            <input id="mode-btn" type="checkbox">
+            <span> <i class="fas fa-moon"></i> Koyu Mod</span>
+            <span> <i class="fas fa-sun"></i> Açık Mod</span>
+        </label>
+
+        <div class="center">
+            <div class="avatar">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.profil" alt="">
+                }
+
+            </div>
+            <div class="content">
+                @foreach (var x in Model)
+                {
+                    <h1>@x.isim</h1>
+                    <h4>@x.unvan</h4>
+                    <p>@x.aciklama</p>
+                    <h3>@x.iletisim</h3>
+                }
+            </div>
+            @Html.Action("ikonlar", "AnaSayfa")
+        </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+    <script src="~/web-KisiselWebSitesi-MVC/script.js"></script>
+</body>
+
+</html>
